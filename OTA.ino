@@ -1,6 +1,6 @@
 //---------------------------FOR-WIFI-UPDATE----------------------SETUP
 void OTA_Conf(){
-        Serial.println("Booting");
+       Serial.println("Booting");
         WiFi.mode(WIFI_STA);
         WiFi.begin(ssid, password);
         while (WiFi.waitForConnectResult() != WL_CONNECTED) 

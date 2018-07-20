@@ -1,8 +1,4 @@
  void Strip_conf(){
-  const uint16_t PixelCount = 60; // make sure to set this to the number of pixels in your strip
-  NeoGamma<NeoGammaTableMethod> colorGamma;
-  NeoPixelBus<NeoGrbFeature, Neo800KbpsMethod> strip(PixelCount);
-
     strip.Begin();
     strip.Show();
   }

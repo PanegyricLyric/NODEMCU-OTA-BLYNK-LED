@@ -28,9 +28,9 @@ NeoPixelBus<NeoGrbFeature, Neo800KbpsMethod> strip(PixelCount);
 //--------------------------------------------------------------------------------------S---E---T---U---P-----
 void setup() {
     Serial.begin(115200);
-    Strip_conf();
     OTA_Conf();
     Blynk_conf();
+    Strip_conf();
 }
 //-----------------------------------------------------------------------------------------L---O---O---P------
 void loop() {
