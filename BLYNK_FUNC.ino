@@ -20,10 +20,10 @@ void mode_switch(int mode)    //---MODE---
            DrawPixelsWhell(2);
            break; 
         case 4:
-           //------
+           DrawPixelsBreath(true, R , G, B);
            break;
          case 5:
-           //------
+            meteorRain(0xff,0xff,0xff,10, 64, true, 30);
            break;
          }
     }

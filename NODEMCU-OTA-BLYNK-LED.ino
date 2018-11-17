@@ -1,3 +1,5 @@
+
+
     //---------------------------FOR-WIFI-UPDATE---------------------INCLUDES
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
@@ -13,6 +15,9 @@ char auth[] = "365352f0ba2245a785f3702f6859eb13";// BLYNK
 char ssidblynk[] = "Bruno";// BLYNK
 char passblynk[] = "1997mup1997";// BLYNK
     //---------------------------FOR-LED-----------------------------INCLUDES
+#include "FastLED.h"
+#define NUM_LEDS 60 
+CRGB leds[NUM_LEDS];
 #include <NeoPixelBus.h>
 #include <NeoPixelAnimator.h>
 
@@ -27,10 +32,13 @@ NeoPixelBus<NeoGrbFeature, Neo800KbpsMethod> strip(PixelCount);
     
 //--------------------------------------------------------------------------------------S---E---T---U---P-----
 void setup() {
+//***************************************************
     Serial.begin(115200);
     OTA_Conf();
     Blynk_conf();
     Strip_conf();
+
+    FastLED.addLeds<WS2811, 3, GRB>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
 }
 //-----------------------------------------------------------------------------------------L---O---O---P------
 void loop() {
